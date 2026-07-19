@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OpenFFS - Open Source Fitness-for-Service Engineering Platform</title>
-  <meta name="description" content="API 579-1/ASME FFS-1 (2021 Edition) compliant Fitness-for-Service assessment software. Free for individual engineers, paid tier for enterprises.">
+  <meta name="description" content="API 579-1/ASME FFS-1 (2021 Edition) Fitness-for-Service assessments for pressure vessels, storage tanks, piping, and structural components.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
   <nav class="nav">
     <div class="nav-brand">OpenFFS</div>
     <ul class="nav-links">
+      <li><a href="#applies">Coverage</a></li>
       <li><a href="#features">Features</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#docs">Documentation</a></li>
@@ -21,9 +22,10 @@
   </nav>
 
   <div class="hero-content">
-    <h1>Engineering-grade FFS,<br>without the enterprise price.</h1>
+    <h1>One FFS methodology,<br>every asset type in your plant.</h1>
     <p class="hero-sub">
-      API 579-1/ASME FFS-1 (2021 Edition) compliant Fitness-for-Service assessments.
+      API 579-1/ASME FFS-1 (2021 Edition) Fitness-for-Service assessments for
+      pressure vessels, storage tanks, piping, and structural components.
       Open source. Built for engineers who deliver real verdicts.
     </p>
     <div class="hero-cta">
@@ -36,14 +38,60 @@
   </div>
 </header>
 
-<section class="problem">
+<section id="applies" class="applies">
   <div class="container">
-    <h2>The problem</h2>
-    <p>
-      Engineers running Fitness-for-Service assessments today rely on expensive
-      desktop software, brittle spreadsheets, or manual calculations against a
-      700-page standard. Every assessment takes hours, audit trails are inconsistent,
-      and verification against API 579 Annexes is rarely documented.
+    <h2>Where OpenFFS applies</h2>
+    <p class="applies-intro">
+      API 579-1/ASME FFS-1 is the unified Fitness-for-Service standard for
+      process plant assets. OpenFFS implements three of its most-used Parts,
+      covering every major asset class in your facility.
+    </p>
+
+    <div class="applies-grid">
+      <div class="applies-card">
+        <div class="applies-code">PRESSURE VESSELS</div>
+        <h3>Vessels, reactors, heat exchangers</h3>
+        <p>
+          Cylindrical shells, heads (torispherical, ellipsoidal),
+          cones, nozzles. Covers general metal loss, localized
+          damage, and structural integrity of supports and skirts.
+        </p>
+      </div>
+
+      <div class="applies-card">
+        <div class="applies-code">STORAGE TANKS</div>
+        <h3>Atmospheric and low-pressure tanks</h3>
+        <p>
+          Shell plates, roof structures, nozzles, and wind girders.
+          Supports API 653 inspection findings with FFS assessments
+          per API 579 Part 4 and Part 14.
+        </p>
+      </div>
+
+      <div class="applies-card">
+        <div class="applies-code">PIPING</div>
+        <h3>Process and utility piping</h3>
+        <p>
+          Straight pipe, elbows, branch connections. Covers uniform
+          metal loss (Part 4), local metal loss with Folias factor
+          (Part 5), and structural support members (Part 14).
+        </p>
+      </div>
+
+      <div class="applies-card">
+        <div class="applies-code">STRUCTURAL</div>
+        <h3>Beams, columns, braces, plates, gussets</h3>
+        <p>
+          Pipe racks, equipment supports, bracing systems, building
+          structures. Part 14 covers damage from impact, corrosion,
+          overload, and fabrication defects.
+        </p>
+      </div>
+    </div>
+
+    <p class="applies-note">
+      One consistent methodology across every asset type — no switching between
+      different tools for pressure equipment vs. structural steel.
     </p>
   </div>
 </section>
@@ -54,29 +102,32 @@
     <div class="features-grid">
 
       <div class="feature-card">
+        <p class="feature-subtitle">Pressure vessels, piping, storage tanks</p>
         <h3>Part 4 - General Metal Loss</h3>
         <p>
           Cylindrical, spherical, conical, torispherical, and ellipsoidal
-          pressure components. Effective thickness, required thickness,
+          components. Effective thickness, required thickness,
           RSF, MAWP back-calculation, remaining life.
         </p>
       </div>
 
       <div class="feature-card">
+        <p class="feature-subtitle">Piping, pressure equipment</p>
         <h3>Part 5 - Local Metal Loss</h3>
         <p>
-          Gouges and pits on pipework. Folias factor for long axial damage,
-          interaction rules for multiple gouges, suitability verdicts with
-          grind/plug weld recommendations.
+          Gouges and pits. Folias factor for long axial damage, interaction
+          rules for multiple gouges, suitability verdicts with grind
+          and plug weld recommendations.
         </p>
       </div>
 
       <div class="feature-card">
+        <p class="feature-subtitle">Beams, columns, braces, plates, structural supports</p>
         <h3>Part 14 - Structural Integrity</h3>
         <p>
-          Beams, columns, braces, angles, plates. Hardness-based strength
-          estimates, effective section properties, stress concentration factors,
-          Levels 1 & 2 verdicts including replace and reinforce.
+          Damaged structural members. Hardness-based strength estimates,
+          effective section properties, stress concentration factors,
+          Levels 1 &amp; 2 verdicts including replace and reinforce.
         </p>
       </div>
 
@@ -151,9 +202,11 @@ openffs report --format html --output report.html</code></pre>
   <div class="container">
     <h2>Pricing</h2>
     <p class="pricing-intro">
-      The Community tier is free forever for learning and evaluation - capped at
-      5 components per assessment and watermarked reports. Upgrade to Pro when you
-      need unlimited components and client-ready deliverables.
+      Used by integrity engineers working on pressure vessels, storage tanks,
+      piping, and structural components. The Community tier is free forever for
+      learning and evaluation - capped at 5 components per assessment and
+      watermarked reports. Upgrade to Pro when you need unlimited components
+      and client-ready deliverables.
     </p>
 
     <div class="pricing-grid">
@@ -275,9 +328,11 @@ openffs report --format html --output report.html</code></pre>
   <div class="container">
     <p>
       &copy; 2026 OpenFFS Contributors. Released under MIT License.
-      API 579-1/ASME FFS-1 is a registered standard of the American Petroleum
-      Institute and ASME. This software is independently developed and not
-      affiliated with or endorsed by API or ASME.
+      OpenFFS implements API 579-1/ASME FFS-1 Part 4 (General Metal Loss), Part 5
+      (Local Metal Loss), and Part 14 (Structural Integrity). It is not certified
+      by, endorsed by, or affiliated with the American Petroleum Institute (API)
+      or ASME. Users must verify results against their own engineering judgment,
+      applicable code editions, and company-specific procedures.
     </p>
   </div>
 </footer>
