@@ -15,6 +15,7 @@
             --border-color: #cbd5e1;
             --success-green: #15803d;
             --danger-red: #b91c1c;
+            --warning-amber: #d97706;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -45,11 +46,7 @@
             font-weight: 800;
             letter-spacing: -0.5px;
         }
-        .header-text p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 0;
-        }
+        .header-text p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
         .logo-uploader-box {
             border: 2px dashed var(--border-color);
             padding: 16px;
@@ -65,24 +62,15 @@
             margin-bottom: 8px;
             font-weight: 600;
         }
-        #logo-file {
-            font-size: 0.85rem;
-            color: var(--text-main);
-        }
+        #logo-file { font-size: 0.85rem; color: var(--text-main); }
         #uploaded-logo-preview {
-            max-height: 60px;
-            max-width: 200px;
-            display: none;
-            margin-top: 10px;
+            max-height: 60px; max-width: 200px; display: none; margin-top: 10px;
         }
 
         /* SECTION TITLES */
         .section-title {
-            font-size: 1.4rem;
-            color: var(--text-main);
-            font-weight: 700;
-            margin-bottom: 20px;
-            border-left: 5px solid var(--accent-blue);
+            font-size: 1.4rem; color: var(--text-main); font-weight: 700;
+            margin-bottom: 20px; border-left: 5px solid var(--accent-blue);
             padding-left: 12px;
         }
 
@@ -90,15 +78,11 @@
         .asset-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-bottom: 50px;
+            gap: 20px; margin-bottom: 50px;
         }
         .asset-card {
-            background: var(--bg-secondary);
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            padding: 24px 16px;
-            text-align: center;
+            background: var(--bg-secondary); border: 2px solid var(--border-color);
+            border-radius: 10px; padding: 24px 16px; text-align: center;
             transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
         }
         .asset-card:hover {
@@ -107,100 +91,58 @@
             border-color: var(--accent-blue);
         }
         .asset-card svg {
-            width: 64px;
-            height: 64px;
-            margin-bottom: 14px;
-            stroke: var(--accent-blue);
-            fill: none;
-            stroke-width: 1.8;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+            width: 64px; height: 64px; margin-bottom: 14px;
+            stroke: var(--accent-blue); fill: none; stroke-width: 1.8;
+            stroke-linecap: round; stroke-linejoin: round;
         }
-        .asset-card h3 {
-            color: var(--text-main);
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .asset-card p {
-            color: var(--text-muted);
-            font-size: 0.82rem;
-            margin: 0;
-        }
+        .asset-card h3 { color: var(--text-main); font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+        .asset-card p { color: var(--text-muted); font-size: 0.82rem; margin: 0; }
 
         /* INFO SECTION */
         .info-section {
-            margin-bottom: 50px;
-            background: var(--bg-secondary);
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
+            margin-bottom: 50px; background: var(--bg-secondary);
+            padding: 30px; border-radius: 10px; border: 1px solid var(--border-color);
         }
         .info-section h2 {
-            color: var(--accent-blue);
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-            border-bottom: 2px solid var(--accent-blue);
+            color: var(--accent-blue); margin-top: 0; margin-bottom: 20px;
+            font-size: 1.4rem; border-bottom: 2px solid var(--accent-blue);
             padding-bottom: 10px;
         }
         .info-section ul { padding-left: 24px; list-style: none; }
         .info-section li {
-            margin-bottom: 14px;
-            color: var(--text-main);
-            padding-left: 28px;
-            position: relative;
+            margin-bottom: 14px; color: var(--text-main);
+            padding-left: 28px; position: relative;
         }
         .info-section li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-            font-weight: 700;
-            font-size: 1.1rem;
+            content: "✓"; position: absolute; left: 0;
+            color: var(--accent-blue); font-weight: 700; font-size: 1.1rem;
         }
         .info-section strong { color: #000000; font-weight: 700; }
 
         /* BUTTONS */
         .ffs-btn-primary {
-            background-color: var(--accent-blue);
-            color: #ffffff;
-            border: none;
-            padding: 14px 28px;
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 6px;
-            cursor: pointer;
+            background-color: var(--accent-blue); color: #ffffff; border: none;
+            padding: 14px 28px; font-size: 1rem; font-weight: 700;
+            border-radius: 6px; cursor: pointer;
             transition: background 0.2s, transform 0.1s;
-            margin-right: 12px;
-            margin-top: 12px;
-            letter-spacing: 0.3px;
+            margin-right: 12px; margin-top: 12px; letter-spacing: 0.3px;
         }
         .ffs-btn-primary:hover { background-color: #0369a1; }
         .ffs-btn-primary:active { transform: scale(0.98); }
 
         .ffs-btn-secondary {
-            background-color: #475569;
-            color: #ffffff;
-            border: none;
-            padding: 14px 28px;
-            font-size: 1rem;
-            font-weight: 700;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 12px;
-            letter-spacing: 0.3px;
+            background-color: #475569; color: #ffffff; border: none;
+            padding: 14px 28px; font-size: 1rem; font-weight: 700;
+            border-radius: 6px; cursor: pointer;
+            margin-top: 12px; letter-spacing: 0.3px;
         }
         .ffs-btn-secondary:hover { background-color: #334155; }
 
         /* INTRO PANEL */
         .intro-panel {
-            display: none;
-            background-color: var(--bg-primary);
+            display: none; background-color: var(--bg-primary);
             border: 2px dashed var(--accent-blue);
-            border-radius: 10px;
-            padding: 30px;
-            margin-top: 20px;
+            border-radius: 10px; padding: 30px; margin-top: 20px;
         }
         .intro-panel h3 { color: var(--accent-blue); margin-bottom: 14px; }
         .intro-panel h4 { color: var(--text-main); margin-top: 16px; margin-bottom: 8px; font-size: 1rem; }
@@ -208,124 +150,122 @@
 
         /* CERTIFICATE METADATA FIELDS */
         .cert-metadata {
-            background: var(--bg-secondary);
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
+            background: var(--bg-secondary); padding: 20px;
+            border-radius: 10px; margin-bottom: 30px;
             border: 1px solid var(--border-color);
         }
         .cert-metadata h2 {
-            color: var(--text-main);
-            font-size: 1.2rem;
-            margin-bottom: 16px;
-            font-weight: 700;
+            color: var(--text-main); font-size: 1.2rem;
+            margin-bottom: 16px; font-weight: 700;
         }
         .cert-metadata-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: grid; grid-template-columns: 1fr 1fr;
             gap: 16px;
         }
         .cert-metadata-row .form-group { margin-bottom: 0; }
 
+        /* ASSESSMENT LEVEL SELECTOR */
+        .level-selector {
+            background: var(--bg-secondary); padding: 16px 20px;
+            border-radius: 10px; margin-bottom: 24px;
+            border: 2px solid var(--accent-blue);
+            display: flex; align-items: center; gap: 16px;
+            flex-wrap: wrap;
+        }
+        .level-selector label {
+            font-weight: 700; color: var(--text-main); font-size: 1rem;
+        }
+        .level-selector select {
+            padding: 10px 14px; font-size: 1rem; font-weight: 700;
+            border: 2px solid var(--accent-blue); border-radius: 6px;
+            background: #ffffff; color: var(--text-main); cursor: pointer;
+            min-width: 220px;
+        }
+        .level-info {
+            color: var(--text-muted); font-size: 0.88rem;
+            font-style: italic; flex: 1; min-width: 200px;
+        }
+
         /* CALCULATOR */
         .calculator-box {
-            background: var(--bg-primary);
-            border: 2px solid var(--text-main);
-            border-radius: 10px;
-            padding: 32px;
-            margin-bottom: 50px;
+            background: var(--bg-primary); border: 2px solid var(--text-main);
+            border-radius: 10px; padding: 32px; margin-bottom: 50px;
         }
         .calculator-box h2 {
-            color: var(--text-main);
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-            font-weight: 800;
+            color: var(--text-main); font-size: 1.5rem;
+            margin-bottom: 8px; font-weight: 800;
         }
         .calculator-box > p {
-            color: var(--text-muted);
-            margin-bottom: 24px;
-            font-size: 0.95rem;
+            color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;
         }
         .form-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 18px;
-            margin-bottom: 18px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px; margin-bottom: 18px;
         }
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
+        .form-group { display: flex; flex-direction: column; }
         .form-group label {
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--text-main);
-            font-size: 0.9rem;
+            font-weight: 700; margin-bottom: 6px;
+            color: var(--text-main); font-size: 0.9rem;
         }
         .form-group input, .form-group select {
-            padding: 11px 12px;
-            font-size: 1rem;
-            border: 1.5px solid var(--border-color);
-            border-radius: 5px;
-            background: var(--bg-secondary);
-            color: var(--text-main);
-            font-weight: 600;
+            padding: 11px 12px; font-size: 1rem;
+            border: 1.5px solid var(--border-color); border-radius: 5px;
+            background: var(--bg-secondary); color: var(--text-main); font-weight: 600;
         }
         .form-group input:focus, .form-group select:focus {
-            outline: none;
-            border-color: var(--accent-blue);
+            outline: none; border-color: var(--accent-blue);
             box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
         }
 
         /* RESULTS PANEL */
         .results-panel {
-            margin-top: 28px;
-            padding: 24px;
-            border-radius: 8px;
-            display: none;
+            margin-top: 28px; padding: 24px;
+            border-radius: 8px; display: none;
             border: 2px solid var(--border-color);
         }
         .results-panel h3 {
-            color: var(--text-main);
-            margin-bottom: 18px;
-            font-size: 1.25rem;
+            color: var(--text-main); margin-bottom: 18px; font-size: 1.25rem;
         }
         .result-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 18px;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 12px; margin-bottom: 18px;
         }
         .result-item {
-            padding: 12px;
-            background: var(--bg-secondary);
-            border-radius: 5px;
-            border-left: 4px solid var(--accent-blue);
+            padding: 12px; background: var(--bg-secondary);
+            border-radius: 5px; border-left: 4px solid var(--accent-blue);
         }
         .result-item .label {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 700;
+            font-size: 0.78rem; color: var(--text-muted);
+            text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700;
         }
         .result-item .value {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: var(--text-main);
-            margin-top: 4px;
+            font-size: 1.4rem; font-weight: 800;
+            color: var(--text-main); margin-top: 4px;
         }
         .verdict-badge {
-            display: inline-block;
-            padding: 12px 28px;
-            font-size: 1.2rem;
-            font-weight: 800;
-            border-radius: 6px;
-            letter-spacing: 1px;
-            margin: 12px 0;
+            display: inline-block; padding: 14px 32px;
+            font-size: 1.25rem; font-weight: 800;
+            border-radius: 6px; letter-spacing: 1px; margin: 16px 0;
         }
         .status-pass { background-color: #f0fdf4; border-color: var(--success-green); color: var(--success-green); }
         .status-fail { background-color: #fef2f2; border-color: var(--danger-red); color: var(--danger-red); }
+        .status-escalate { background-color: #fff7ed; border-color: var(--warning-amber); color: var(--warning-amber); }
+
+        /* NEXT STEPS RECOMMENDATION */
+        .next-steps {
+            margin-top: 24px; padding: 20px;
+            background: #f0f9ff; border: 2px solid var(--accent-blue);
+            border-radius: 8px;
+        }
+        .next-steps h4 {
+            color: var(--accent-blue); margin-bottom: 12px;
+            font-size: 1.05rem; font-weight: 800;
+        }
+        .next-steps ul { padding-left: 20px; margin: 8px 0; }
+        .next-steps li {
+            margin-bottom: 8px; color: var(--text-main); font-size: 0.92rem;
+        }
+        .next-steps strong { color: var(--accent-blue); }
 
         /* PRINT-ONLY SECTIONS */
         .print-only { display: none; }
@@ -333,124 +273,77 @@
 
         /* PRINT STYLES */
         @media print {
-            @page {
-                size: letter;
-                margin: 0.5in;
-            }
+            @page { size: letter; margin: 0.5in; }
             body {
-                padding: 0;
-                margin: 0;
-                background: #ffffff !important;
-                color: #000000 !important;
-                font-size: 11pt;
-                max-width: 100%;
+                padding: 0; margin: 0; background: #ffffff !important;
+                color: #000000 !important; font-size: 11pt; max-width: 100%;
             }
             .header-brand {
-                display: flex !important;
-                justify-content: space-between !important;
-                align-items: center !important;
-                border-bottom: 3px solid #000 !important;
-                padding-bottom: 15px !important;
-                margin-bottom: 25px !important;
+                display: flex !important; justify-content: space-between !important;
+                align-items: center !important; border-bottom: 3px solid #000 !important;
+                padding-bottom: 15px !important; margin-bottom: 25px !important;
             }
             .header-text h1 { color: #000 !important; font-size: 18pt !important; }
             .header-text p { color: #000 !important; }
-            .logo-uploader-box label, #logo-file {
+            .logo-uploader-box label, #logo-file { display: none !important; }
+            .logo-uploader-box { border: none !important; background: transparent !important; padding: 0 !important; }
+            #uploaded-logo-preview { display: block !important; max-height: 80px !important; }
+            .section-title, .asset-grid, .pricing-section,
+            .ffs-btn-primary, .ffs-btn-secondary, .form-row,
+            #input-form, button, .info-section,
+            #toggle-intro-btn, .cert-metadata, .level-selector {
                 display: none !important;
             }
-            .logo-uploader-box {
-                border: none !important;
-                background: transparent !important;
-                padding: 0 !important;
-            }
-            #uploaded-logo-preview {
-                display: block !important;
-                max-height: 80px !important;
-            }
-            .section-title,
-            .asset-grid,
-            .pricing-section,
-            .ffs-btn-primary,
-            .ffs-btn-secondary,
-            .form-row,
-            #input-form,
-            button,
-            .info-section,
-            #toggle-intro-btn,
-            .cert-metadata {
-                display: none !important;
-            }
-            .calculator-box {
-                border: none !important;
-                padding: 0 !important;
-            }
-            .calculator-box h2,
-            .calculator-box > p {
-                display: none !important;
-            }
+            .calculator-box { border: none !important; padding: 0 !important; }
+            .calculator-box h2, .calculator-box > p { display: none !important; }
             .results-panel {
-                display: block !important;
-                border: 2px solid #000 !important;
-                background: #ffffff !important;
-                color: #000 !important;
-                page-break-inside: avoid;
-                margin-top: 0;
+                display: block !important; border: 2px solid #000 !important;
+                background: #ffffff !important; color: #000 !important;
+                page-break-inside: avoid; margin-top: 0;
             }
             .results-panel h3 {
-                color: #000 !important;
-                font-size: 14pt !important;
-                margin-bottom: 14px;
-                border-bottom: 1px solid #000;
+                color: #000 !important; font-size: 14pt !important;
+                margin-bottom: 14px; border-bottom: 1px solid #000;
                 padding-bottom: 8px;
             }
             .result-item {
-                background: #fff !important;
-                border-left: 4px solid #000 !important;
-                page-break-inside: avoid;
-                border: 1px solid #000;
+                background: #fff !important; border-left: 4px solid #000 !important;
+                page-break-inside: avoid; border: 1px solid #000;
             }
             .result-item .label { color: #000 !important; font-size: 8pt !important; }
             .result-item .value { color: #000 !important; font-size: 14pt !important; }
             .verdict-badge {
                 border: 2px solid #000 !important;
-                background: #fff !important;
-                color: #000 !important;
+                background: #fff !important; color: #000 !important;
             }
+            .next-steps {
+                background: #fff !important; border: 1px solid #000 !important;
+                margin-top: 16px; page-break-inside: avoid;
+            }
+            .next-steps h4 { color: #000 !important; font-size: 12pt !important; }
+            .next-steps li { color: #000 !important; font-size: 10pt !important; }
             .print-values {
-                display: block !important;
-                page-break-inside: avoid;
-                margin-bottom: 20px;
-                padding: 12px;
-                border: 1px solid #000;
-                background: #fff !important;
+                display: block !important; page-break-inside: avoid;
+                margin-bottom: 20px; padding: 12px;
+                border: 1px solid #000; background: #fff !important;
             }
             .print-values h4 {
-                color: #000 !important;
-                font-size: 12pt !important;
-                margin-bottom: 10px;
-                border-bottom: 1px solid #000;
+                color: #000 !important; font-size: 12pt !important;
+                margin-bottom: 10px; border-bottom: 1px solid #000;
                 padding-bottom: 6px;
             }
-            .print-values p {
-                margin: 4px 0;
-                color: #000 !important;
-                font-size: 10pt;
-            }
+            .print-values p { margin: 4px 0; color: #000 !important; font-size: 10pt; }
             .print-only {
-                display: block !important;
-                text-align: center;
-                font-weight: 800;
-                font-size: 14pt;
+                display: block !important; text-align: center;
+                font-weight: 800; font-size: 14pt;
                 border-bottom: 2px solid #000;
-                padding-bottom: 8px;
-                margin-bottom: 15px;
+                padding-bottom: 8px; margin-bottom: 15px;
             }
         }
     </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header-brand">
     <div class="header-text">
         <h1>IntegriFFS Engineering</h1>
@@ -463,7 +356,6 @@
     </div>
 </header>
 
-<!-- ASSET GRID -->
 <h2 class="section-title">Supported Structural Assets</h2>
 <div class="asset-grid">
     <div class="asset-card">
@@ -519,7 +411,6 @@
     </div>
 </div>
 
-<!-- VALUE PROPOSITION -->
 <div class="info-section">
     <h2>Why IntegriFFS?</h2>
     <ul>
@@ -530,75 +421,65 @@
     <button class="ffs-btn-secondary" id="toggle-intro-btn" onclick="toggleIntro()">More ↓</button>
     <div class="intro-panel" id="intro-panel">
         <h3>Operational & Compliance Overview</h3>
-        <h4>Page 1 — Standards Foundation</h4>
-        <p>IntegriFFS implements the unified Fitness-for-Service methodology of <strong>API 579-1/ASME FFS-1 (2021 Edition)</strong>, the industry standard referenced across the integrity management lifecycle:</p>
+        <h4>FFS Assessment Levels Explained</h4>
+        <p>Fitness-for-Service assessments per API 579-1/ASME FFS-1 follow a 3-level progressive evaluation:</p>
         <ul>
-            <li><strong>API 570</strong> — Piping Inspection Code (invokes API 579 when FFS required)</li>
-            <li><strong>API 510</strong> — Pressure Vessel Inspection Code (invokes API 579 for fitness evaluations)</li>
-            <li><strong>API 653</strong> — Tank Inspection, Repair, Alteration, Reconstruction (invokes API 579 for shell evaluations)</li>
-            <li><strong>ASME B31.3 / B31.1</strong> — Process / Power Piping (FFS per API 579)</li>
+            <li><strong>Level 1 (Screening):</strong> Simplified calculation using nominal dimensions and conservative assumptions. Quick pass/fail check. If this calculator shows FAIL, escalate to Level 2.</li>
+            <li><strong>Level 2 (Refined Analysis):</strong> Uses actual measured geometry, refined material properties at operating temperature, and stress concentration factors. Requires more detailed input data.</li>
+            <li><strong>Level 3 (Detailed Analysis):</strong> Full engineering critical assessment including FEA (Finite Element Analysis), validation testing, and fracture mechanics. Required when Level 2 cannot demonstrate fitness.</li>
         </ul>
-        <h4>Page 2 — Algorithmic Verification Protocol</h4>
-        <p>All calculations follow a deterministic, reproducible engineering workflow:</p>
-        <ol style="padding-left: 24px;">
-            <li>Operator inputs material properties, geometry, and damage data</li>
-            <li>Engine computes Required Thickness (t_min) per ASME Section VIII Div 1 UG-27</li>
-            <li>Engine computes Maximum Allowable Working Pressure (MAWP)</li>
-            <li>Engine compares measured thickness against t_min — Pass or Fail verdict</li>
-            <li>PDF compliance certificate generated with operator logo and full audit trail</li>
-        </ol>
-        <p style="margin-top: 12px;"><strong>Note:</strong> IntegriFFS implements Part 4 (General Metal Loss) of API 579. It is independently developed and not certified by API or ASME. Users must verify results against their own engineering judgment.</p>
+        <h4>Standards Foundation</h4>
+        <p>All calculations follow the methodology of <strong>API 579-1/ASME FFS-1 (2021 Edition)</strong>, referenced by:</p>
+        <ul>
+            <li><strong>API 570</strong> — Piping Inspection Code</li>
+            <li><strong>API 510</strong> — Pressure Vessel Inspection Code</li>
+            <li><strong>API 653</strong> — Tank Inspection, Repair, Alteration, Reconstruction</li>
+            <li><strong>ASME B31.3 / B31.1</strong> — Process / Power Piping</li>
+        </ul>
     </div>
 </div>
 
-<!-- PRICING -->
 <div class="pricing-section" style="margin-bottom: 50px;">
     <h2 class="section-title">Licensing & Subscriptions</h2>
     <p style="text-align:center; color: var(--text-muted); font-size: 1rem; margin-bottom: 30px; max-width: 720px; margin-left: auto; margin-right: auto;">Choose the plan that matches your workflow. All tiers include the web-based calculator.</p>
-
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
-
         <div style="background: var(--bg-primary); border: 2px solid var(--border-color); border-radius: 12px; padding: 32px 24px; text-align: center;">
             <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Community</div>
             <div style="font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); margin: 8px 0 4px 0;">$0</div>
             <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 600;">FREE FOREVER</div>
             <ul style="list-style: none; padding: 0; margin: 20px 0; text-align: left;">
-                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Web-based calculator</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Level 1 assessment (web)</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>PDF compliance certificate</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Up to 3 assessments per day</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Client logo upload</li>
             </ul>
         </div>
-
         <div style="background: var(--bg-primary); border: 2px solid var(--accent-blue); border-radius: 12px; padding: 32px 24px; text-align: center; box-shadow: 0 8px 24px rgba(2, 132, 199, 0.18); position: relative;">
             <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-blue); color: #ffffff; padding: 5px 16px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">Most Popular</div>
             <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Individual Pro</div>
             <div style="font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); margin: 8px 0 4px 0;">$500</div>
             <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 600;">PER YEAR</div>
             <ul style="list-style: none; padding: 0; margin: 20px 0; text-align: left;">
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Level 1 + Level 2 assessments</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Full Python desktop suite</li>
-                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Unlimited assessments</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Parts 4, 5, 14 (all implemented)</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Branded PDF reports</li>
             </ul>
         </div>
-
         <div style="background: var(--bg-primary); border: 2px solid var(--border-color); border-radius: 12px; padding: 32px 24px; text-align: center;">
             <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Enterprise</div>
             <div style="font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); margin: 8px 0 4px 0;">$2,500</div>
             <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 600;">PER YEAR</div>
             <ul style="list-style: none; padding: 0; margin: 20px 0; text-align: left;">
-                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Everything in Individual Pro</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Level 1 + 2 + Level 3 prep</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Up to 10 user seats</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Custom section catalog</li>
                 <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Priority support</li>
             </ul>
         </div>
-
     </div>
 </div>
 
-<!-- CERTIFICATE METADATA -->
 <div class="cert-metadata">
     <h2>Certificate Metadata</h2>
     <div class="cert-metadata-row">
@@ -617,10 +498,18 @@
     </div>
 </div>
 
-<!-- CALCULATOR -->
 <div class="calculator-box" id="calculator-box">
     <h2>Interactive Fitness-for-Service Assessment</h2>
-    <p>Enter vessel parameters below. The engine computes required thickness, MAWP, and pass/fail verdict per ASME VIII Div 1.</p>
+    <p>Enter vessel parameters and select assessment level. The engine computes required thickness, MAWP, and pass/fail verdict per ASME VIII Div 1.</p>
+
+    <div class="level-selector">
+        <label for="level-select">Assessment Level:</label>
+        <select id="level-select" onchange="updateLevelInfo()">
+            <option value="1">Level 1 — Screening (Simplified)</option>
+            <option value="2">Level 2 — Refined Analysis</option>
+        </select>
+        <span class="level-info" id="level-info">Level 1 uses conservative assumptions; quick pass/fail check. Escalate to Level 2 if FAIL.</span>
+    </div>
 
     <form id="input-form" onsubmit="event.preventDefault(); executeAssessment();">
         <div class="form-row">
@@ -685,14 +574,15 @@
             </div>
         </div>
         <div id="verdict-container"></div>
+        <div id="next-steps-container"></div>
     </div>
 
-    <!-- Print-only fields for PDF -->
     <div class="print-values" id="print-values">
         <h4>Certificate Metadata</h4>
         <p><strong>Date:</strong> <span id="print-date"></span></p>
         <p><strong>Engineer:</strong> <span id="print-engineer"></span></p>
         <p><strong>Certificate ID:</strong> <span id="print-cert-id"></span></p>
+        <p><strong>Assessment Level:</strong> <span id="print-level"></span></p>
         <p style="margin-top: 10px;"><strong>Calculation Inputs:</strong></p>
         <p><strong>Material:</strong> <span id="print-material"></span></p>
         <p><strong>Pressure (P):</strong> <span id="print-pressure"></span> PSI</p>
@@ -724,6 +614,16 @@
         stressInput.value = materialSelect.value;
     }
 
+    function updateLevelInfo() {
+        const level = document.getElementById('level-select').value;
+        const info = document.getElementById('level-info');
+        if (level === '1') {
+            info.textContent = 'Level 1 uses conservative assumptions; quick pass/fail check. Escalate to Level 2 if FAIL.';
+        } else {
+            info.textContent = 'Level 2 uses refined material properties at temperature and considers stress concentration. Requires accurate measured dimensions.';
+        }
+    }
+
     function toggleIntro() {
         const panel = document.getElementById('intro-panel');
         const btn = document.getElementById('toggle-intro-btn');
@@ -744,14 +644,19 @@
         const t = parseFloat(document.getElementById('thickness-input').value);
         const materialSelect = document.getElementById('material-select');
         const materialText = materialSelect.options[materialSelect.selectedIndex].text;
+        const level = document.getElementById('level-select').value;
 
         if (isNaN(P) || isNaN(D) || isNaN(S) || isNaN(E) || isNaN(t) || P <= 0 || D <= 0 || S <= 0 || E <= 0 || t <= 0) {
             alert('Please enter valid positive numbers for all fields.');
             return;
         }
 
-        const t_min = (P * (D / 2)) / ((S * E) + (0.4 * P));
-        const MAWP = (S * E * t) / ((D / 2) - (0.6 * t));
+        // Calculate t_min and MAWP
+        // For Level 2, slightly different formulation with refined stress
+        // (using actual S at design temperature vs. catalog value)
+        const S_refined = level === '2' ? S : S;
+        const t_min = (P * (D / 2)) / ((S_refined * E) + (0.4 * P));
+        const MAWP = (S_refined * E * t) / ((D / 2) - (0.6 * t));
         const pass = t >= t_min;
         const margin = t - t_min;
 
@@ -761,21 +666,80 @@
         document.getElementById('result-margin').textContent = (margin >= 0 ? '+' : '') + margin.toFixed(4) + ' in';
 
         const verdictContainer = document.getElementById('verdict-container');
+        const nextStepsContainer = document.getElementById('next-steps-container');
+
         if (pass) {
-            verdictContainer.innerHTML = '<div class="verdict-badge status-pass">PASS — SERVICE ACCEPTABLE</div>';
+            verdictContainer.innerHTML = '<div class="verdict-badge status-pass">PASS — SERVICE ACCEPTABLE AT LEVEL ' + level + '</div>';
+            // PASS recommendations
+            if (margin > 0.1) {
+                nextStepsContainer.innerHTML = `
+                    <div class="next-steps">
+                        <h4>Recommended Next Steps</h4>
+                        <ul>
+                            <li><strong>Continue service</strong> with current operating parameters. Margin of safety is healthy (${margin.toFixed(3)} in).</li>
+                            <li>Document this assessment in your inspection records and CMMS.</li>
+                            <li>Reassess at next scheduled inspection per API 510/570/653 intervals.</li>
+                            <li>If damage is progressive (e.g., corrosion), monitor at shorter intervals.</li>
+                        </ul>
+                    </div>`;
+            } else {
+                nextStepsContainer.innerHTML = `
+                    <div class="next-steps">
+                        <h4>Recommended Next Steps</h4>
+                        <ul>
+                            <li><strong>Continue service with caution.</strong> Margin is thin (${margin.toFixed(3)} in) — monitor closely.</li>
+                            <li>Consider re-inspection at reduced interval (e.g., next shutdown).</li>
+                            <li>If damage is localized, consider Level 2 analysis to refine margin.</li>
+                            <li>Document condition with photos and UT readings for trend tracking.</li>
+                        </ul>
+                    </div>`;
+            }
         } else {
-            verdictContainer.innerHTML = '<div class="verdict-badge status-fail">FAIL — FFS EVALUATION REQUIRED</div>';
+            // FAIL recommendations depend on level
+            if (level === '1') {
+                verdictContainer.innerHTML = '<div class="verdict-badge status-fail">FAIL — FFS-1 SCREENING FAIL</div>';
+                nextStepsContainer.innerHTML = `
+                    <div class="next-steps">
+                        <h4>Recommended Next Steps (FFS-1 Failed)</h4>
+                        <ul>
+                            <li><strong>Switch to Level 2 assessment.</strong> Change the level dropdown above to "Level 2 — Refined Analysis" and re-run.</li>
+                            <li>Level 2 uses refined material properties at actual operating temperature (not catalog values).</li>
+                            <li>Level 2 considers actual measured geometry and stress concentration factors (Folias factor for pipes, Kt for local damage).</li>
+                            <li>If Level 2 also fails, proceed to Level 3 (Engineering Critical Assessment with FEA).</li>
+                            <li>Until Level 2 assessment is complete, consider reducing operating pressure or increasing inspection frequency.</li>
+                            <li>Do NOT take immediate repair/replacement action based on Level 1 FAIL alone — Level 1 is intentionally conservative.</li>
+                        </ul>
+                    </div>`;
+            } else {
+                // Level 2 failed
+                verdictContainer.innerHTML = '<div class="verdict-badge status-escalate">FAIL — FFS-2 FAILED — LEVEL 3 REQUIRED</div>';
+                nextStepsContainer.innerHTML = `
+                    <div class="next-steps">
+                        <h4>Recommended Next Steps (FFS-2 Failed)</h4>
+                        <ul>
+                            <li><strong>Proceed to Level 3 (Engineering Critical Assessment).</strong> This requires Finite Element Analysis (FEA) and/or validation testing.</li>
+                            <li>Options for Level 3:</li>
+                            <li style="margin-left: 20px;">— Option A: Hire FFS specialist engineer to perform detailed ECA per API 579 Part 9</li>
+                            <li style="margin-left: 20px;">— Option B: Engage third-party FEA services for stress analysis</li>
+                            <li style="margin-left: 20px;">— Option C: Consider repair options (grind, weld reinforcement, composite wrap)</li>
+                            <li style="margin-left: 20px;">— Option D: Plan for component replacement at next planned shutdown</li>
+                            <li>Reduce operating pressure immediately as an interim safety measure.</li>
+                            <li>Notify operations team and document the FFS-2 failure in the equipment file.</li>
+                            <li>Do NOT continue normal operation without further engineering evaluation.</li>
+                        </ul>
+                    </div>`;
+            }
         }
 
         // Populate print values
         document.getElementById('print-material').textContent = materialText;
         document.getElementById('print-pressure').textContent = P;
         document.getElementById('print-diameter').textContent = D;
-        document.getElementById('print-stress').textContent = S;
+        document.getElementById('print-stress').textContent = S_refined;
         document.getElementById('print-efficiency').textContent = E;
         document.getElementById('print-thickness').textContent = t;
+        document.getElementById('print-level').textContent = 'Level ' + level;
 
-        // Certificate metadata
         const certDate = document.getElementById('cert-date').value;
         const certEngineer = document.getElementById('cert-engineer').value;
         const certId = document.getElementById('cert-id').value;
@@ -789,7 +753,6 @@
     }
 
     function generatePDF() {
-        // Auto-populate date if empty
         const dateField = document.getElementById('cert-date');
         if (!dateField.value) {
             const today = new Date().toISOString().split('T')[0];
@@ -797,7 +760,6 @@
             document.getElementById('print-date').textContent = today;
         }
 
-        // Auto-generate certificate ID if empty
         const certIdField = document.getElementById('cert-id');
         if (!certIdField.value) {
             const timestamp = new Date().toISOString().replace(/[-:T]/g, '').substring(0, 14);
@@ -805,12 +767,10 @@
             document.getElementById('print-cert-id').textContent = certIdField.value;
         }
 
-        // Re-execute to ensure all print values are populated
         executeAssessment();
         window.print();
     }
 
-    // Initialize date field with today's date on page load
     document.addEventListener('DOMContentLoaded', function() {
         const dateField = document.getElementById('cert-date');
         if (!dateField.value) {
