@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenFFS - Open Source Fitness-for-Service Engineering Platform</title>
+  <meta name="description" content="API 579-1/ASME FFS-1 (2021 Edition) compliant Fitness-for-Service assessment software. Free for individual engineers, paid tier for enterprises.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <nav class="nav">
+    <div class="nav-brand">OpenFFS</div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#docs">Documentation</a></li>
+      <li><a href="https://github.com/srisurya59-art/openffs" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1>Engineering-grade FFS,<br>without the enterprise price.</h1>
+    <p class="hero-sub">
+      API 579-1/ASME FFS-1 (2021 Edition) compliant Fitness-for-Service assessments.
+      Open source. Built for engineers who deliver real verdicts.
+    </p>
+    <div class="hero-cta">
+      <a href="#download" class="btn btn-primary">Download Free Version</a>
+      <a href="#pricing" class="btn btn-secondary">View Pricing</a>
+    </div>
+    <p class="hero-meta">
+      Free for individuals &middot; MIT-licensed core &middot; No vendor lock-in
+    </p>
+  </div>
+</header>
+
+<section class="problem">
+  <div class="container">
+    <h2>The problem</h2>
+    <p>
+      Engineers running Fitness-for-Service assessments today rely on expensive
+      desktop software, brittle spreadsheets, or manual calculations against a
+      700-page standard. Every assessment takes hours, audit trails are inconsistent,
+      and verification against API 579 Annexes is rarely documented.
+    </p>
+  </div>
+</section>
+
+<section id="features" class="features">
+  <div class="container">
+    <h2>What OpenFFS does</h2>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <h3>Part 4 - General Metal Loss</h3>
+        <p>
+          Cylindrical, spherical, conical, torispherical, and ellipsoidal
+          pressure components. Effective thickness, required thickness,
+          RSF, MAWP back-calculation, remaining life.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Part 5 - Local Metal Loss</h3>
+        <p>
+          Gouges and pits on pipework. Folias factor for long axial damage,
+          interaction rules for multiple gouges, suitability verdicts with
+          grind/plug weld recommendations.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Part 14 - Structural Integrity</h3>
+        <p>
+          Beams, columns, braces, angles, plates. Hardness-based strength
+          estimates, effective section properties, stress concentration factors,
+          Levels 1 & 2 verdicts including replace and reinforce.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Audit-ready reports</h3>
+        <p>
+          Every assessment produces a calculation log with equation IDs,
+          substituted values, and intermediate results. Verbatim API 579
+          clause citations on every result.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Standards currency notifier</h3>
+        <p>
+          Tracks API 570, 571, 579, 510 and ASME B31.3, B31.1, VIII-1.
+          Alerts you when a new edition is due for review.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <h3>CLI + Python API</h3>
+        <p>
+          Run from terminal, embed in pipelines, or build a custom GUI on
+          top of the Python API. Your data never leaves your machine.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="download" class="download">
+  <div class="container">
+    <h2>Get started in 5 minutes</h2>
+
+    <div class="install-steps">
+      <h3>Option 1 - Python install (recommended)</h3>
+      <pre><code>git clone https://github.com/srisurya59-art/openffs.git
+cd openffs
+pip install -e .
+openffs --version</code></pre>
+
+      <h3>Option 2 - Standalone installer (Windows)</h3>
+      <p>
+        Download the bundled installer - includes Python runtime, no
+        separate install needed.
+      </p>
+      <p>
+        <a href="https://github.com/srisurya59-art/openffs/releases/latest" class="btn btn-primary">
+          Download OpenFFS v0.7.0 for Windows
+        </a>
+        <br>
+        <small>(~80 MB - includes Python runtime)</small>
+      </p>
+    </div>
+
+    <div class="quickstart">
+      <h3>Quick start with the example</h3>
+      <pre><code>cd examples/pipe_support_inspection
+openffs assess --level 1
+openffs report --format html --output report.html</code></pre>
+      <p>
+        The example runs an FFS-1 assessment on a 54-inch pipe support
+        structure with 8 components. You should see 4 verdicts immediately.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="container">
+    <h2>Pricing</h2>
+    <p class="pricing-intro">
+      The core is MIT-licensed and free forever. Support the project by upgrading
+      to a paid tier when you need the full feature set.
+    </p>
+
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <h3>Community</h3>
+        <div class="price-amount">$0</div>
+        <div class="price-period">forever</div>
+        <ul class="price-features">
+          <li>API 579 Part 4 (General Metal Loss)</li>
+          <li>API 579 Part 14 (Structural Integrity)</li>
+          <li>Level 1 assessments</li>
+          <li>Text and HTML reports</li>
+          <li>CLI + Python API</li>
+          <li>MIT license - use anywhere</li>
+        </ul>
+        <a href="https://github.com/srisurya59-art/openffs" class="btn btn-secondary">
+          Download from GitHub
+        </a>
+      </div>
+
+      <div class="price-card price-card-featured">
+        <div class="badge">Most popular</div>
+        <h3>Individual Pro</h3>
+        <div class="price-amount">$500</div>
+        <div class="price-period">per year</div>
+        <ul class="price-features">
+          <li>Everything in Community</li>
+          <li>API 579 Part 5 (Local Metal Loss)</li>
+          <li>Level 2 assessments</li>
+          <li>Branded PDF reports</li>
+          <li>1 named seat</li>
+          <li>Email support (48-hour response)</li>
+          <li>All future Part 9, 10, 11 modules</li>
+        </ul>
+        <button class="btn btn-primary" onclick="selectTier('individual')">
+          Buy Individual Pro
+        </button>
+      </div>
+
+      <div class="price-card">
+        <h3>Enterprise</h3>
+        <div class="price-amount">$2,500</div>
+        <div class="price-period">per year</div>
+        <ul class="price-features">
+          <li>Everything in Individual Pro</li>
+          <li>Up to 10 named seats</li>
+          <li>Custom section catalog</li>
+          <li>Audit log export</li>
+          <li>Priority email + Slack support</li>
+          <li>On-premise / air-gapped deployment</li>
+          <li>Quarterly training webinar</li>
+        </ul>
+        <button class="btn btn-primary" onclick="selectTier('enterprise')">
+          Buy Enterprise
+        </button>
+      </div>
+
+    </div>
+
+    <div id="payment-section" class="payment-section" style="display:none;">
+      <h3>Select your payment method</h3>
+      <p>
+        We use Stripe for global payments and Razorpay for India. Choose based
+        on your country.
+      </p>
+      <div class="payment-options">
+        <button class="btn btn-secondary" onclick="openStripe()">
+          Pay with Stripe (Global)
+        </button>
+        <button class="btn btn-secondary" onclick="openRazorpay()">
+          Pay with Razorpay (India)
+        </button>
+      </div>
+      <p class="payment-note">
+        After payment, your license key will be emailed within 1 hour during
+        business hours, or next business day otherwise.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="docs" class="docs">
+  <div class="container">
+    <h2>Documentation</h2>
+    <div class="docs-grid">
+      <a href="https://github.com/srisurya59-art/openffs/blob/main/HOW_TO_USE.md" class="doc-link">
+        <h3>User Manual</h3>
+        <p>Step-by-step guide for engineers using OpenFFS on real inspection data.</p>
+      </a>
+      <a href="https://github.com/srisurya59-art/openffs/blob/main/ERS-API579-004.md" class="doc-link">
+        <h3>Engineering Specs (ERS)</h3>
+        <p>Formal engineering specifications for each Part implementation.</p>
+      </a>
+      <a href="https://github.com/srisurya59-art/openffs/blob/main/README.md" class="doc-link">
+        <h3>README</h3>
+        <p>Installation, project structure, and contribution guidelines.</p>
+      </a>
+      <a href="https://github.com/srisurya59-art/openffs/issues" class="doc-link">
+        <h3>Issue Tracker</h3>
+        <p>Report bugs, request features, ask questions.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h2>Get in touch</h2>
+    <p>
+      Questions, enterprise quotes, or feedback:
+      <a href="mailto:hello@openffs.engineering">hello@openffs.engineering</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>
+      &copy; 2026 OpenFFS Contributors. Released under MIT License.
+      API 579-1/ASME FFS-1 is a registered standard of the American Petroleum
+      Institute and ASME. This software is independently developed and not
+      affiliated with or endorsed by API or ASME.
+    </p>
+  </div>
+</footer>
+
+<script src="payment.js"></script>
+</body>
+</html>
+
