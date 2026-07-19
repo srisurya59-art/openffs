@@ -41,7 +41,7 @@
         .header-text h1 {
             color: var(--text-main);
             margin: 0 0 8px 0;
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 800;
             letter-spacing: -0.5px;
         }
@@ -152,7 +152,7 @@
             position: relative;
         }
         .info-section li:before {
-            content: "\2713";
+            content: "✓";
             position: absolute;
             left: 0;
             color: var(--accent-blue);
@@ -202,145 +202,30 @@
             padding: 30px;
             margin-top: 20px;
         }
-        .intro-panel h3 {
-            color: var(--accent-blue);
-            margin-bottom: 14px;
-        }
-        .intro-panel h4 {
-            color: var(--text-main);
-            margin-top: 16px;
-            margin-bottom: 8px;
-            font-size: 1rem;
-        }
-        .intro-panel p, .intro-panel li {
-            color: var(--text-main);
-            font-size: 0.92rem;
-        }
+        .intro-panel h3 { color: var(--accent-blue); margin-bottom: 14px; }
+        .intro-panel h4 { color: var(--text-main); margin-top: 16px; margin-bottom: 8px; font-size: 1rem; }
+        .intro-panel p, .intro-panel li { color: var(--text-main); font-size: 0.92rem; }
 
-        /* PRICING SECTION */
-        .pricing-section {
-            margin-bottom: 50px;
-        }
-        .pricing-intro {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 1rem;
+        /* CERTIFICATE METADATA FIELDS */
+        .cert-metadata {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 10px;
             margin-bottom: 30px;
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
+            border: 1px solid var(--border-color);
         }
-        .pricing-grid {
+        .cert-metadata h2 {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .cert-metadata-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
         }
-        .pricing-card {
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 32px 24px;
-            text-align: center;
-            position: relative;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .pricing-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-        }
-        .pricing-card.featured {
-            border-color: var(--accent-blue);
-            box-shadow: 0 8px 24px rgba(2, 132, 199, 0.18);
-            transform: scale(1.03);
-        }
-        .pricing-card.featured:hover {
-            transform: scale(1.03) translateY(-4px);
-        }
-        .pricing-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent-blue);
-            color: #ffffff;
-            padding: 5px 16px;
-            border-radius: 14px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .pricing-tier-name {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-main);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-        .pricing-amount {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--accent-blue);
-            margin: 8px 0 4px 0;
-        }
-        .pricing-amount.featured {
-            color: var(--accent-blue);
-        }
-        .pricing-period {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-        .pricing-features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            text-align: left;
-        }
-        .pricing-features li {
-            padding: 8px 0 8px 24px;
-            color: var(--text-main);
-            font-size: 0.9rem;
-            position: relative;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .pricing-features li:last-child { border-bottom: none; }
-        .pricing-features li:before {
-            content: "\2713";
-            position: absolute;
-            left: 0;
-            color: var(--success-green);
-            font-weight: 700;
-        }
-        .pricing-cta {
-            display: inline-block;
-            background: var(--accent-blue);
-            color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            margin-top: 12px;
-            transition: background 0.2s;
-        }
-        .pricing-cta:hover { background: #0369a1; }
-        .pricing-card:not(.featured) .pricing-cta {
-            background: #475569;
-        }
-        .pricing-card:not(.featured) .pricing-cta:hover {
-            background: #334155;
-        }
-        .pricing-upsell {
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid #e2e8f0;
-        }
+        .cert-metadata-row .form-group { margin-bottom: 0; }
 
         /* CALCULATOR */
         .calculator-box {
@@ -442,32 +327,9 @@
         .status-pass { background-color: #f0fdf4; border-color: var(--success-green); color: var(--success-green); }
         .status-fail { background-color: #fef2f2; border-color: var(--danger-red); color: var(--danger-red); }
 
-        /* PRINT VALUES */
-        .print-values {
-            display: none;
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #000;
-            background: #fff;
-        }
-        .print-values h3 {
-            color: #000;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-            border-bottom: 1px solid #000;
-            padding-bottom: 6px;
-        }
-        .print-values-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        .print-values-grid p {
-            margin: 0;
-            color: #000;
-            font-size: 0.85rem;
-        }
-        .print-values-grid strong { color: #000; }
+        /* PRINT-ONLY SECTIONS */
+        .print-only { display: none; }
+        .print-values { display: none; }
 
         /* PRINT STYLES */
         @media print {
@@ -493,7 +355,9 @@
             }
             .header-text h1 { color: #000 !important; font-size: 18pt !important; }
             .header-text p { color: #000 !important; }
-            .logo-uploader-box label, #logo-file { display: none !important; }
+            .logo-uploader-box label, #logo-file {
+                display: none !important;
+            }
             .logo-uploader-box {
                 border: none !important;
                 background: transparent !important;
@@ -512,7 +376,8 @@
             #input-form,
             button,
             .info-section,
-            #toggle-intro-btn {
+            #toggle-intro-btn,
+            .cert-metadata {
                 display: none !important;
             }
             .calculator-box {
@@ -535,11 +400,14 @@
                 color: #000 !important;
                 font-size: 14pt !important;
                 margin-bottom: 14px;
+                border-bottom: 1px solid #000;
+                padding-bottom: 8px;
             }
             .result-item {
                 background: #fff !important;
                 border-left: 4px solid #000 !important;
                 page-break-inside: avoid;
+                border: 1px solid #000;
             }
             .result-item .label { color: #000 !important; font-size: 8pt !important; }
             .result-item .value { color: #000 !important; font-size: 14pt !important; }
@@ -551,8 +419,24 @@
             .print-values {
                 display: block !important;
                 page-break-inside: avoid;
+                margin-bottom: 20px;
+                padding: 12px;
+                border: 1px solid #000;
+                background: #fff !important;
             }
-            .print-only-header {
+            .print-values h4 {
+                color: #000 !important;
+                font-size: 12pt !important;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #000;
+                padding-bottom: 6px;
+            }
+            .print-values p {
+                margin: 4px 0;
+                color: #000 !important;
+                font-size: 10pt;
+            }
+            .print-only {
                 display: block !important;
                 text-align: center;
                 font-weight: 800;
@@ -562,7 +446,6 @@
                 margin-bottom: 15px;
             }
         }
-        .print-only-header { display: none; }
     </style>
 </head>
 <body>
@@ -576,7 +459,7 @@
     <div class="logo-uploader-box">
         <label for="logo-file">Upload Client / Corporate Logo</label>
         <input type="file" id="logo-file" accept="image/*" onchange="handleLogoUpload(event)">
-        <img id="uploaded-logo-preview" alt="Uploaded Logo">
+        <img id="uploaded-logo-preview" alt="">
     </div>
 </header>
 
@@ -644,10 +527,9 @@
         <li><strong>Open-Source Transparency:</strong> Inspect every equation, every formula, every assumption. No black-box software. MIT-licensed core.</li>
         <li><strong>Multi-Asset Workflows:</strong> Pressure vessels, storage tanks, piping, and structural components - all in one unified methodology.</li>
     </ul>
-    <button class="ffs-btn-secondary" id="toggle-intro-btn" onclick="toggleIntro()">More &darr;</button>
+    <button class="ffs-btn-secondary" id="toggle-intro-btn" onclick="toggleIntro()">More ↓</button>
     <div class="intro-panel" id="intro-panel">
         <h3>Operational & Compliance Overview</h3>
-
         <h4>Page 1 — Standards Foundation</h4>
         <p>IntegriFFS implements the unified Fitness-for-Service methodology of <strong>API 579-1/ASME FFS-1 (2021 Edition)</strong>, the industry standard referenced across the integrity management lifecycle:</p>
         <ul>
@@ -656,7 +538,6 @@
             <li><strong>API 653</strong> — Tank Inspection, Repair, Alteration, Reconstruction (invokes API 579 for shell evaluations)</li>
             <li><strong>ASME B31.3 / B31.1</strong> — Process / Power Piping (FFS per API 579)</li>
         </ul>
-
         <h4>Page 2 — Algorithmic Verification Protocol</h4>
         <p>All calculations follow a deterministic, reproducible engineering workflow:</p>
         <ol style="padding-left: 24px;">
@@ -670,75 +551,70 @@
     </div>
 </div>
 
-<!-- PRICING SECTION -->
-<div class="pricing-section">
+<!-- PRICING -->
+<div class="pricing-section" style="margin-bottom: 50px;">
     <h2 class="section-title">Licensing & Subscriptions</h2>
-    <p class="pricing-intro">Choose the plan that matches your workflow. All tiers include the web-based calculator. Higher tiers unlock the full Python suite for batch assessments, custom sections, and audit-ready reporting.</p>
+    <p style="text-align:center; color: var(--text-muted); font-size: 1rem; margin-bottom: 30px; max-width: 720px; margin-left: auto; margin-right: auto;">Choose the plan that matches your workflow. All tiers include the web-based calculator.</p>
 
-    <div class="pricing-grid">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
 
-        <!-- COMMUNITY TIER -->
-        <div class="pricing-card">
-            <div class="pricing-tier-name">Community</div>
-            <div class="pricing-amount">$0</div>
-            <div class="pricing-period">FREE FOREVER</div>
-            <ul class="pricing-features">
-                <li>Web-based calculator (this page)</li>
-                <li>API 579 Part 4 General Metal Loss</li>
-                <li>PDF compliance certificate</li>
-                <li>Up to 3 assessments per day</li>
-                <li>Client logo upload</li>
-                <li>Open-source transparency</li>
+        <div style="background: var(--bg-primary); border: 2px solid var(--border-color); border-radius: 12px; padding: 32px 24px; text-align: center;">
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Community</div>
+            <div style="font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); margin: 8px 0 4px 0;">$0</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 600;">FREE FOREVER</div>
+            <ul style="list-style: none; padding: 0; margin: 20px 0; text-align: left;">
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Web-based calculator</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>PDF compliance certificate</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Up to 3 assessments per day</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Client logo upload</li>
             </ul>
-            <a href="#calculator-box" class="pricing-cta">Use Free Calculator</a>
-            <div class="pricing-upsell">No login required</div>
         </div>
 
-        <!-- INDIVIDUAL PRO TIER -->
-        <div class="pricing-card featured">
-            <div class="pricing-badge">Most Popular</div>
-            <div class="pricing-tier-name">Individual Pro</div>
-            <div class="pricing-amount">$500</div>
-            <div class="pricing-period">PER YEAR</div>
-            <ul class="pricing-features">
-                <li>Everything in Community</li>
-                <li>Full Python desktop suite</li>
-                <li>Unlimited assessments</li>
-                <li>Parts 4, 5, 14 (all implemented)</li>
-                <li>Level 1 &amp; 2 FFS assessments</li>
-                <li>Branded PDF reports (no watermark)</li>
-                <li>1 named user seat</li>
-                <li>48-hour email support</li>
+        <div style="background: var(--bg-primary); border: 2px solid var(--accent-blue); border-radius: 12px; padding: 32px 24px; text-align: center; box-shadow: 0 8px 24px rgba(2, 132, 199, 0.18); position: relative;">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-blue); color: #ffffff; padding: 5px 16px; border-radius: 14px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">Most Popular</div>
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Individual Pro</div>
+            <div style="font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); margin: 8px 0 4px 0;">$500</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 600;">PER YEAR</div>
+            <ul style="list-style: none; padding: 0; margin: 20px 0; text-align: left;">
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Full Python desktop suite</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Unlimited assessments</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Parts 4, 5, 14 (all implemented)</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Branded PDF reports</li>
             </ul>
-            <a href="mailto:sales@integriFFs.com?subject=Individual%20Pro%20License" class="pricing-cta">Request License</a>
-            <div class="pricing-upsell">Ideal for solo integrity engineers</div>
         </div>
 
-        <!-- ENTERPRISE TIER -->
-        <div class="pricing-card">
-            <div class="pricing-tier-name">Enterprise</div>
-            <div class="pricing-amount">$2,500</div>
-            <div class="pricing-period">PER YEAR</div>
-            <ul class="pricing-features">
-                <li>Everything in Individual Pro</li>
-                <li>Up to 10 named user seats</li>
-                <li>Custom section shape catalog</li>
-                <li>API integration (REST endpoints)</li>
-                <li>Bulk batch processing</li>
-                <li>Audit log export (CSV / JSON)</li>
-                <li>Air-gapped deployment option</li>
-                <li>Priority support (24-hour SLA)</li>
-                <li>Quarterly compliance training webinar</li>
+        <div style="background: var(--bg-primary); border: 2px solid var(--border-color); border-radius: 12px; padding: 32px 24px; text-align: center;">
+            <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Enterprise</div>
+            <div style="font-size: 2.8rem; font-weight: 800; color: var(--accent-blue); margin: 8px 0 4px 0;">$2,500</div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; font-weight: 600;">PER YEAR</div>
+            <ul style="list-style: none; padding: 0; margin: 20px 0; text-align: left;">
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Everything in Individual Pro</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Up to 10 user seats</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative; border-bottom: 1px solid #e2e8f0;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Custom section catalog</li>
+                <li style="padding: 8px 0 8px 24px; color: var(--text-main); font-size: 0.9rem; position: relative;"><span style="position: absolute; left: 0; color: var(--success-green); font-weight: 700;">✓</span>Priority support</li>
             </ul>
-            <a href="mailto:sales@integriFFs.com?subject=Enterprise%20License%20Inquiry" class="pricing-cta">Contact Sales</a>
-            <div class="pricing-upsell">For inspection service companies & EPC firms</div>
         </div>
 
     </div>
+</div>
 
-    <p style="text-align:center; color: var(--text-muted); font-size: 0.85rem; margin-top: 30px;">
-        All paid licenses include a 14-day money-back guarantee. Volume discounts available for 10+ seats.
-    </p>
+<!-- CERTIFICATE METADATA -->
+<div class="cert-metadata">
+    <h2>Certificate Metadata</h2>
+    <div class="cert-metadata-row">
+        <div class="form-group">
+            <label for="cert-date">Assessment Date</label>
+            <input type="date" id="cert-date">
+        </div>
+        <div class="form-group">
+            <label for="cert-engineer">Assessing Engineer / Reviewer Name</label>
+            <input type="text" id="cert-engineer" placeholder="e.g., John Smith, P.E.">
+        </div>
+    </div>
+    <div class="form-group" style="margin-top: 16px;">
+        <label for="cert-id">Certificate ID</label>
+        <input type="text" id="cert-id" placeholder="e.g., FFS-2026-00123">
+    </div>
 </div>
 
 <!-- CALCULATOR -->
@@ -811,20 +687,23 @@
         <div id="verdict-container"></div>
     </div>
 
+    <!-- Print-only fields for PDF -->
     <div class="print-values" id="print-values">
-        <h3>Calculation Inputs (Auditor Record)</h3>
-        <div class="print-values-grid">
-            <p><strong>Material:</strong> <span id="print-material"></span></p>
-            <p><strong>Pressure (P):</strong> <span id="print-pressure"></span> PSI</p>
-            <p><strong>Diameter (D):</strong> <span id="print-diameter"></span> in</p>
-            <p><strong>Stress (S):</strong> <span id="print-stress"></span> PSI</p>
-            <p><strong>Efficiency (E):</strong> <span id="print-efficiency"></span></p>
-            <p><strong>Thickness (t):</strong> <span id="print-thickness"></span> in</p>
-        </div>
+        <h4>Certificate Metadata</h4>
+        <p><strong>Date:</strong> <span id="print-date"></span></p>
+        <p><strong>Engineer:</strong> <span id="print-engineer"></span></p>
+        <p><strong>Certificate ID:</strong> <span id="print-cert-id"></span></p>
+        <p style="margin-top: 10px;"><strong>Calculation Inputs:</strong></p>
+        <p><strong>Material:</strong> <span id="print-material"></span></p>
+        <p><strong>Pressure (P):</strong> <span id="print-pressure"></span> PSI</p>
+        <p><strong>Diameter (D):</strong> <span id="print-diameter"></span> in</p>
+        <p><strong>Stress (S):</strong> <span id="print-stress"></span> PSI</p>
+        <p><strong>Efficiency (E):</strong> <span id="print-efficiency"></span></p>
+        <p><strong>Thickness (t):</strong> <span id="print-thickness"></span> in</p>
     </div>
 </div>
 
-<div class="print-only-header">IntegriFFS Engineering — Fitness-for-Service Compliance Certificate</div>
+<div class="print-only">IntegriFFS Engineering — Fitness-for-Service Compliance Certificate</div>
 
 <script>
     function handleLogoUpload(event) {
@@ -850,10 +729,10 @@
         const btn = document.getElementById('toggle-intro-btn');
         if (panel.style.display === 'none' || panel.style.display === '') {
             panel.style.display = 'block';
-            btn.innerHTML = 'Less &uarr;';
+            btn.innerHTML = 'Less ↑';
         } else {
             panel.style.display = 'none';
-            btn.innerHTML = 'More &darr;';
+            btn.innerHTML = 'More ↓';
         }
     }
 
@@ -888,6 +767,7 @@
             verdictContainer.innerHTML = '<div class="verdict-badge status-fail">FAIL — FFS EVALUATION REQUIRED</div>';
         }
 
+        // Populate print values
         document.getElementById('print-material').textContent = materialText;
         document.getElementById('print-pressure').textContent = P;
         document.getElementById('print-diameter').textContent = D;
@@ -895,14 +775,48 @@
         document.getElementById('print-efficiency').textContent = E;
         document.getElementById('print-thickness').textContent = t;
 
+        // Certificate metadata
+        const certDate = document.getElementById('cert-date').value;
+        const certEngineer = document.getElementById('cert-engineer').value;
+        const certId = document.getElementById('cert-id').value;
+        document.getElementById('print-date').textContent = certDate || 'Not specified';
+        document.getElementById('print-engineer').textContent = certEngineer || 'Not specified';
+        document.getElementById('print-cert-id').textContent = certId || 'Auto-generated';
+
         const resultsPanel = document.getElementById('results-panel');
         resultsPanel.style.display = 'block';
         document.getElementById('pdf-btn').style.display = 'inline-block';
     }
 
     function generatePDF() {
+        // Auto-populate date if empty
+        const dateField = document.getElementById('cert-date');
+        if (!dateField.value) {
+            const today = new Date().toISOString().split('T')[0];
+            dateField.value = today;
+            document.getElementById('print-date').textContent = today;
+        }
+
+        // Auto-generate certificate ID if empty
+        const certIdField = document.getElementById('cert-id');
+        if (!certIdField.value) {
+            const timestamp = new Date().toISOString().replace(/[-:T]/g, '').substring(0, 14);
+            certIdField.value = `FFS-${timestamp}`;
+            document.getElementById('print-cert-id').textContent = certIdField.value;
+        }
+
+        // Re-execute to ensure all print values are populated
+        executeAssessment();
         window.print();
     }
+
+    // Initialize date field with today's date on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const dateField = document.getElementById('cert-date');
+        if (!dateField.value) {
+            dateField.value = new Date().toISOString().split('T')[0];
+        }
+    });
 </script>
 
 </body>
